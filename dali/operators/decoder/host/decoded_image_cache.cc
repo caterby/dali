@@ -53,7 +53,7 @@ DecodedImage& DecodedImageCache::Read(const ImageKey& image_key) const {
 }
 
 DecodedImage& DecodedImageCache::Get(const ImageKey& image_key) const {
-  std::cout << "+++++ The Get function in decoder/host/image_cache_blob.cc +++++" << std::endl;
+  std::cout << "+++++ The Get function +++++" << std::endl;
   std::lock_guard<std::mutex> lock(mutex_);
   std::cout << "Get: image_key[" << image_key << "]" << std::endl;
   const auto it = cache_.find(image_key);
